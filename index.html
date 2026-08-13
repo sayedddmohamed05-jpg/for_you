@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>إلى حنتي 🤍</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#08070b;
+    color:#fff;
+    font-family:Cairo,sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-5;
+
+    background:
+    radial-gradient(circle at 10% 15%,rgba(255,100,170,.13),transparent 25%),
+    radial-gradient(circle at 90% 25%,rgba(140,100,255,.12),transparent 25%),
+    radial-gradient(circle at 50% 100%,rgba(255,150,190,.08),transparent 30%);
+}
+
+#particles{
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    pointer-events:none;
+}
+
+.particle{
+    position:absolute;
+    width:2px;
+    height:2px;
+    border-radius:50%;
+    background:white;
+    opacity:.25;
+    animation:float linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(110vh);
+        opacity:0;
+    }
+    20%{opacity:.4}
+    80%{opacity:.4}
+    to{
+        transform:translateY(-10vh);
+        opacity:0;
+    }
+}
+
+/* =========================
+   START
+========================= */
+
+#start{
+    position:fixed;
+    inset:0;
+    z-index:100;
+    background:#08070b;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:1s;
+}
+
+.startBox{
+    text-align:center;
+    width:90%;
+}
+
+.startSmall{
+    color:#807581;
+    font-size:11px;
+    letter-spacing:4px;
+    margin-bottom:25px;
+}
+
+.startHeart{
+    font-size:70px;
+    animation:beat 1.5s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1)}
+    15%{transform:scale(1.15)}
+    30%{transform:scale(1)}
+    45%{transform:scale(1.1)}
+}
+
+.startTitle{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(45px,11vw,80px);
+    margin-top:20px;
+
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #ffd0e3,
+        #d3c1ff,
+        #fff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 6s linear infinite;
+}
+
+@keyframes shine{
+    to{background-position:300%}
+}
+
+.startText{
+    color:#827985;
+    font-size:13px;
+    margin-top:15px;
+}
+
+.startButton{
+    border:0;
+    margin-top:35px;
+    padding:15px 35px;
+    border-radius:50px;
+
+    background:linear-gradient(135deg,#ffd5e7,#d7c5ff);
+    color:#160a11;
+
+    font-family:Cairo;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.startButton:hover{
+    transform:translateY(-4px);
+    box-shadow:0 15px 45px rgba(235,170,205,.25);
+}
+
+/* =========================
+   NAV
+========================= */
+
+.nav{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+
+    z-index:20;
+
+    padding:9px 18px;
+    border-radius:50px;
+
+    background:rgba(20,18,25,.7);
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    color:#8d8492;
+    font-size:11px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+main{
+    opacity:0;
+    transition:1.3s;
+}
+
+section{
+    min-height:100vh;
+    padding:90px 20px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+}
+
+.number{
+    color:#d09ab8;
+    font-size:11px;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,8vw,70px);
+    line-height:1.25;
+    font-weight:500;
+}
+
+.line{
+    width:70px;
+    height:1px;
+    margin:25px 0;
+
+    background:linear-gradient(
+        90deg,
+        #e1a9c5,
+        transparent
+    );
+}
+
+.glass{
+    margin-top:35px;
+    padding:35px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.09);
+
+    backdrop-filter:blur(22px);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.35),
+    inset 0 1px rgba(255,255,255,.06);
+}
+
+.text{
+    color:#c4bbc8;
+    font-size:15px;
+    line-height:2.35;
+}
+
+.pink{
+    color:#f0bdd6;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    text-align:center;
+}
+
+.heroSmall{
+    color:#8b808e;
+    font-size:11px;
+    letter-spacing:4px;
+}
+
+.heroName{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(85px,21vw,180px);
+    line-height:.9;
+    margin-top:20px;
+
+    background:
+    linear-gradient(
+        120deg,
+        #fff,
+        #ffd2e5,
+        #cdbaff,
+        #fff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 7s linear infinite;
+}
+
+.heroSub{
+    color:#928794;
+    margin-top:30px;
+}
+
+.heroSub span{
+    color:#efbdd5;
+}
+
+.scroll{
+    color:#625966;
+    font-size:11px;
+    margin-top:100px;
+}
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.reason{
+    min-height:160px;
+    padding:25px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.07),
+        rgba(255,255,255,.025)
+    );
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.4s;
+}
+
+.reason:hover{
+    transform:translateY(-7px);
+    border-color:rgba(245,190,215,.25);
+}
+
+.reasonIcon{
+    font-size:27px;
+    margin-bottom:15px;
+}
+
+.reason h3{
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.reason p{
+    color:#817784;
+    font-size:12px;
+    line-height:1.9;
+}
+
+/* =========================
+   ADMISSION
+========================= */
+
+.confession{
+    text-align:center;
+}
+
+.confessionTitle{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(40px,8vw,65px);
+}
+
+.confessionButton{
+    margin-top:35px;
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.045);
+    color:#ded5df;
+
+    padding:15px 30px;
+    border-radius:50px;
+
+    font-family:Cairo;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.confessionButton:hover{
+    transform:scale(1.04);
+}
+
+.confessionText{
+    max-width:650px;
+    margin:30px auto 0;
+
+    color:#bdb3c1;
+    line-height:2.3;
+
+    display:none;
+}
+
+.confessionText.show{
+    display:block;
+    animation:appear .7s;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   MOOD
+========================= */
+
+.mood{
+    text-align:center;
+}
+
+.moodButtons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.moodButton{
+    border:1px solid rgba(255,255,255,.1);
+    background:rgba(255,255,255,.04);
+    color:#d5ccd8;
+
+    padding:13px 22px;
+    border-radius:50px;
+
+    font-family:Cairo;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.moodButton:hover{
+    transform:translateY(-4px);
+}
+
+.moodResult{
+    min-height:80px;
+    margin-top:30px;
+    color:#e2bfd2;
+    line-height:2.2;
+}
+
+/* =========================
+   MINI GAME
+========================= */
+
+.game{
+    text-align:center;
+}
+
+.gameBox{
+    margin-top:35px;
+    padding:35px 25px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.gameQuestion{
+    font-size:19px;
+    margin-bottom:25px;
+}
+
+.gameButtons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.gameBtn{
+    padding:13px 22px;
+    border-radius:50px;
+
+    font-family:Cairo;
+    cursor:pointer;
+
+    color:#ddd5df;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.1);
+
+    transition:.3s;
+}
+
+.gameBtn:hover{
+    transform:translateY(-3px);
+}
+
+.gameResult{
+    margin-top:25px;
+    color:#e4bfd2;
+    min-height:30px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter{
+    padding:40px 30px;
+
+    border-radius:30px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(255,210,230,.055),
+        rgba(190,170,255,.04)
+    );
+
+    border:1px solid rgba(255,255,255,.09);
+
+    position:relative;
+    overflow:hidden;
+}
+
+.letter::after{
+    content:"♡";
+
+    position:absolute;
+    left:-30px;
+    bottom:-50px;
+
+    font-size:200px;
+    color:rgba(255,255,255,.015);
+}
+
+.letterTop{
+    color:#746b78;
+    font-size:11px;
+    margin-bottom:30px;
+}
+
+.letterText{
+    color:#c8bfcb;
+    line-height:2.4;
+    font-size:15px;
+}
+
+.letterText strong{
+    color:#efbed7;
+    font-weight:500;
+}
+
+/* =========================
+   SECRET GIFTS
+========================= */
+
+.gifts{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:35px;
+}
+
+.gift{
+    height:170px;
+
+    border-radius:25px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:40px;
+
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.09);
+
+    cursor:pointer;
+
+    transition:.4s;
+}
+
+.gift:hover{
+    transform:translateY(-7px) rotate(1deg);
+}
+
+.giftContent{
+    display:none;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+    color:#cfc3cf;
+    line-height:2;
+}
+
+.gift.open{
+    height:auto;
+    min-height:170px;
+}
+
+.gift.open .giftIcon{
+    display:none;
+}
+
+.gift.open .giftContent{
+    display:block;
+    animation:appear .6s;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+    margin-top:40px;
+    border-right:1px solid rgba(255,255,255,.1);
+    padding-right:25px;
+}
+
+.event{
+    position:relative;
+    margin-bottom:35px;
+}
+
+.event::before{
+    content:"";
+
+    position:absolute;
+
+    width:9px;
+    height:9px;
+
+    border-radius:50%;
+
+    background:#d99db9;
+
+    right:-30px;
+    top:7px;
+
+    box-shadow:0 0 20px rgba(220,150,190,.5);
+}
+
+.eventTitle{
+    color:#e5bfd2;
+    margin-bottom:5px;
+}
+
+.eventText{
+    color:#817784;
+    font-size:12px;
+    line-height:1.9;
+}
+
+/* =========================
+   COUNTER
+========================= */
+
+.counter{
+    text-align:center;
+}
+
+.counterNumber{
+    font-family:"Playfair Display",serif;
+    font-size:90px;
+
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #efbdd6
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.counterText{
+    color:#837985;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+    text-align:center;
+}
+
+.finalTitle{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(45px,10vw,80px);
+}
+
+.finalSub{
+    color:#827785;
+    margin-top:15px;
+}
+
+.finalButtons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.btn{
+    padding:15px 30px;
+    border-radius:50px;
+
+    font-family:Cairo;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.yes{
+    border:0;
+    background:linear-gradient(135deg,#ffd4e6,#d9c3ff);
+    color:#160a11;
+}
+
+.no{
+    color:#d9d1db;
+    background:rgba(255,255,255,.04);
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+#finalReveal{
+    display:none;
+}
+
+.finalHeart{
+    font-size:75px;
+    animation:beat 1.5s infinite;
+}
+
+.finalName{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(55px,12vw,100px);
+    margin-top:20px;
+
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #f3bdd7,
+        #cdbbff,
+        #fff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:shine 6s linear infinite;
+}
+
+.finalMessage{
+    max-width:650px;
+    margin:30px auto;
+
+    color:#aaa0ae;
+    line-height:2.4;
+}
+
+.signature{
+    margin-top:50px;
+    color:#6d6571;
+    font-size:12px;
+}
+
+.signature span{
+    color:#e8b3cd;
+}
+
+/* =========================
+   HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-40px;
+    z-index:90;
+
+    pointer-events:none;
+
+    animation:rise 6s linear forwards;
+}
+
+@keyframes rise{
+    0%{
+        opacity:0;
+        transform:translateY(0) scale(.5);
+    }
+
+    15%{opacity:1}
+
+    100%{
+        opacity:0;
+        transform:
+        translateY(-110vh)
+        translateX(var(--move))
+        rotate(25deg)
+        scale(1.5);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+    .reasons{
+        grid-template-columns:1fr;
+    }
+
+    .gifts{
+        grid-template-columns:1fr;
+    }
+
+    .glass{
+        padding:27px 20px;
+    }
+
+    .letter{
+        padding:30px 20px;
+    }
+
+    .counterNumber{
+        font-size:70px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+
+<!-- START -->
+
+<div id="start">
+
+    <div class="startBox">
+
+        <div class="startSmall">
+            FOR SOMEONE VERY SPECIAL
+        </div>
+
+        <div class="startHeart">
+            ♡
+        </div>
+
+        <div class="startTitle">
+            حنتي
+        </div>
+
+        <div class="startText">
+            محاميحو عنده حاجة عايز يقولها...
+        </div>
+
+        <button
+            class="startButton"
+            onclick="openSite()">
+
+            ادخلي 🤍
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="nav">
+    من محاميحو ❤️
+</div>
+
+
+<main id="site">
+
+
+<!-- HERO -->
+
+<section>
+
+<div class="container hero">
+
+    <div class="heroSmall">
+        THIS PLACE BELONGS TO
+    </div>
+
+    <div class="heroName">
+        حنتي
+    </div>
+
+    <div class="heroSub">
+        والموقع ده معمول
+        <span>علشانك إنتِ.</span>
+    </div>
+
+    <div class="scroll">
+        انزلي...
+        <br><br>
+        لسه البداية 🤍
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- APOLOGY -->
+
+<section>
+
+<div class="container">
+
+    <div class="number">
+        01 — البداية
+    </div>
+
+    <div class="title">
+        أنا عارف
+        <br>
+        إنك زعلانة.
+    </div>
+
+    <div class="line"></div>
+
+    <div class="glass">
+
+        <div class="text">
+
+            وعارف كمان إن الموضوع
+            مش مجرد "زعل وخلاص".
+
+            <br><br>
+
+            إنتِ زعلانة لأنك حسيتي
+            إني <span class="pink">مش مهتم بيكي كفاية.</span>
+
+            <br><br>
+
+            ويمكن أنا فعلًا خليتك تحسي بده
+            من غير ما أقصد.
+
+            <br><br>
+
+            بس ده مش معناه إن إحساسي ناحيتك قليل.
+
+            <br><br>
+
+            بالعكس...
+
+            <br><br>
+
+            <span class="pink">
+                يمكن أنا بس محتاج أتعلم
+                إزاي أبين اللي جوايا بشكل أحسن.
+            </span>
+
+            <br><br>
+
+            وعلشان كده...
+
+            <br>
+
+            حقك عليا يا حنتي. 🤍
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- 10 REASONS -->
+
+<section>
+
+<div class="container">
+
+    <div class="number">
+        02 — ليه إنتِ مهمة؟
+    </div>
+
+    <div class="title">
+        10 حاجات
+        <br>
+        لازم تعرفيهم.
+    </div>
+
+    <div class="reasons">
+
+        <div class="reason">
+            <div class="reasonIcon">♡</div>
+            <h3>وجودك بيفرق</h3>
+            <p>حتى الأيام العادية بتبقى مختلفة لما تكوني موجودة.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">✦</div>
+            <h3>صوتك بيفرق</h3>
+            <p>حتى لو محاميحو أحيانًا بيتعامل كأنه مش مركز 😂.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">☾</div>
+            <h3>زعلِك بيفرق</h3>
+            <p>أنا فعلًا مبكونش مرتاح لما أعرف إنك زعلانة مني.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">∞</div>
+            <h3>مش عايز أخسرك</h3>
+            <p>ودي يمكن أكتر حاجة لازم تكوني عارفاها.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">♡</div>
+            <h3>بحب تفاصيلك</h3>
+            <p>الحاجات الصغيرة اللي ممكن غيري مياخدش باله منها.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">✧</div>
+            <h3>بتوحشيني</h3>
+            <p>حتى لو مش دايمًا بعرف أقولها في وقتها.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">☁</div>
+            <h3>ليكي مكان خاص</h3>
+            <p>مش أي حد يقدر ياخد المكان ده.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">♥</div>
+            <h3>أنا بحب وجودك</h3>
+            <p>ودي من أبسط وأصدق الحاجات اللي أقدر أقولها.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">⌁</div>
+            <h3>بتخليني أراجع نفسي</h3>
+            <p>لأن رأيك وزعلك مش حاجة عابرة عندي.</p>
+        </div>
+
+        <div class="reason">
+            <div class="reasonIcon">∞</div>
+            <h3>إنتِ حنتي</h3>
+            <p>ودي لوحدها إجابة كفاية. ❤️</p>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CONFESSION -->
+
+<section>
+
+<div class="container confession">
+
+    <div class="number">
+        03 — محاميحو يعترف
+    </div>
+
+    <div class="confessionTitle">
+        عندي اعتراف.
+    </div>
+
+    <button
+        class="confessionButton"
+        onclick="confess()">
+
+        اضغطي هنا 👀
+
+    </button>
+
+    <div
+        id="confessionText"
+        class="confessionText">
+
+        أنا ساعات ببقى غبي فعلًا في التعبير 😂
+
+        <br><br>
+
+        ممكن أحب الشخص جدًا
+        وأفتكر إن ده واضح لوحده.
+
+        <br><br>
+
+        بس واضح إنه مش واضح.
+
+        <br><br>
+
+        فـ حاضر يا حنتي...
+
+        <br>
+
+        <span class="pink">
+            هحاول أخليكي تحسي بالاهتمام
+            بدل ما أفترض إنك عارفاه.
+        </span>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- MOOD -->
+
+<section>
+
+<div class="container mood">
+
+    <div class="number">
+        04 — اختاري مزاجك
+    </div>
+
+    <div class="title">
+        دلوقتي إنتِ حاسة بإيه؟
+    </div>
+
+    <div class="moodButtons">
+
+        <button
+            class="moodButton"
+            onclick="mood(1)">
+            زعلانة 😤
+        </button>
+
+        <button
+            class="moodButton"
+            onclick="mood(2)">
+            متضايقة 🥺
+        </button>
+
+        <button
+            class="moodButton"
+            onclick="mood(3)">
+            بدأت أهدى 🤍
+        </button>
+
+        <button
+            class="moodButton"
+            onclick="mood(4)">
+            خلاص بقى 😂
+        </button>
+
+    </div>
+
+    <div id="moodResult" class="moodResult"></div>
+
+</div>
+
+</section>
+
+
+<!-- GAME -->
+
+<section>
+
+<div class="container game">
+
+    <div class="number">
+        05 — اختبار سريع
+    </div>
+
+    <div class="title">
+        نختبر محاميحو؟
+    </div>
+
+    <div class="gameBox">
+
+        <div class="gameQuestion">
+            إيه أكتر حاجة المفروض محاميحو يعملها؟
+        </div>
+
+        <div class="gameButtons">
+
+            <button
+                class="gameBtn"
+                onclick="game(1)">
+                يهتم
+            </button>
+
+            <button
+                class="gameBtn"
+                onclick="game(2)">
+                يسمع
+            </button>
+
+            <button
+                class="gameBtn"
+                onclick="game(3)">
+                الاتنين
+            </button>
+
+        </div>
+
+        <div id="gameResult" class="gameResult"></div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- LETTER -->
+
+<section>
+
+<div class="container">
+
+    <div class="number">
+        06 — الرسالة
+    </div>
+
+    <div class="title">
+        من قلبي...
+        <br>
+        ليكي.
+    </div>
+
+    <div class="line"></div>
+
+    <div class="letter">
+
+        <div class="letterTop">
+            TO: حنتي
+        </div>
+
+        <div class="letterText">
+
+            حنتي،
+
+            <br><br>
+
+            أنا عارف إن كلمة آسف سهلة،
+            وعارف إن ممكن أي حد يقولها.
+
+            <br><br>
+
+            علشان كده أنا مش عايز أكتفي بيها.
+
+            <br><br>
+
+            أنا عايزك تعرفي إنّي فاهم
+            ليه زعلتي.
+
+            <br><br>
+
+            فاهم إنك محتاجة اهتمام،
+            محتاجة تحسي إنك مهمة،
+            ومحتاجة تشوفي ده في التصرفات.
+
+            <br><br>
+
+            وده حقك.
+
+            <br><br>
+
+            يمكن أنا قصرت،
+            بس مش علشان مكانتك قليلة.
+
+            <br><br>
+
+            بالعكس...
+
+            <br>
+
+            <strong>
+                يمكن علشان أنا اتعودت على وجودك
+                ونسيت قد إيه هو غالي.
+            </strong>
+
+            <br><br>
+
+            حقك عليا.
+
+            <br><br>
+
+            ومهما كتبت هنا،
+            أهم حاجة إن الكلام ده يظهر في معاملتي ليكي.
+
+            <br><br>
+
+            <strong>
+                بحبك يا حنتي. ❤️
+            </strong>
+
+            <br><br>
+
+            — محاميحو
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- GIFTS -->
+
+<section>
+
+<div class="container">
+
+    <div class="number">
+        07 — 3 حاجات مستخبيين
+    </div>
+
+    <div class="title">
+        افتحيهم واحدة واحدة.
+    </div>
+
+    <div class="gifts">
+
+        <div
+            class="gift"
+            onclick="openGift(this)">
+
+            <div class="giftIcon">
+                🎁
+            </div>
+
+            <div class="giftContent">
+                أول هدية:
+                <br><br>
+                <span class="pink">
+                    ابتسامتك عندي أهم من أي كلام.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div
+            class="gift"
+            onclick="openGift(this)">
+
+            <div class="giftIcon">
+                💌
+            </div>
+
+            <div class="giftContent">
+                تاني هدية:
+                <br><br>
+                <span class="pink">
+                    أنا فعلًا مش عايز أفضل سبب في زعلك.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div
+            class="gift"
+            onclick="openGift(this)">
+
+            <div class="giftIcon">
+                🔐
+            </div>
+
+            <div class="giftContent">
+                آخر هدية:
+                <br><br>
+                <span class="pink">
+                    مكانك عند محاميحو محفوظ. ❤️
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section>
+
+<div class="container">
+
+    <div class="number">
+        08 — حاجات حلوة
+    </div>
+
+    <div class="title">
+        من أول الحكاية
+        <br>
+        لحد دلوقتي.
+    </div>
+
+    <div class="timeline">
+
+        <div class="event">
+            <div class="eventTitle">
+                أول مرة قربنا من بعض
+            </div>
+
+            <div class="eventText">
+                اللحظة اللي بدأ فيها وجودك يبقى له معنى مختلف.
+            </div>
+        </div>
+
+
+        <div class="event">
+            <div class="eventTitle">
+                أول مرة ضحكتيني
+            </div>
+
+            <div class="eventText">
+                ومن ساعتها بقيتي من الناس اللي وجودهم بيغير المود.
+            </div>
+        </div>
+
+
+        <div class="event">
+            <div class="eventTitle">
+                كل التفاصيل الصغيرة
+            </div>
+
+            <div class="eventText">
+                كلام، هزار، زعل، صلح...
+                كلها حاجات عملت حكايتنا.
+            </div>
+        </div>
+
+
+        <div class="event">
+            <div class="eventTitle">
+                دلوقتي
+            </div>
+
+            <div class="eventText">
+                حنتي زعلانة ومحاميحو بيحاول يصلح اللي بوظه 😂❤️.
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- COUNTER -->
+
+<section>
+
+<div class="container counter">
+
+    <div class="number">
+        09 — إحصائية مهمة جدًا
+    </div>
+
+    <div class="counterNumber">
+        100%
+    </div>
+
+    <div class="counterText">
+        نسبة إن محاميحو نفسه حنتي ترجع مبسوطة 😂❤️
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section>
+
+<div class="container final">
+
+    <div id="choice">
+
+        <div class="number">
+            10 — القرار الأخير
+        </div>
+
+        <div class="finalTitle">
+            نتصالح؟
+        </div>
+
+        <div class="finalSub">
+            بعد كل اللي شوفتيه...
+            القرار عند حنتي 🤍
+        </div>
+
+        <div class="finalButtons">
+
+            <button
+                class="btn yes"
+                onclick="forgive()">
+
+                خلاص سامحتك ❤️
+
+            </button>
+
+            <button
+                class="btn no"
+                id="noBtn"
+                onclick="notYet()">
+
+                لسه زعلانة 😤
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div id="finalReveal">
+
+        <div class="finalHeart">
+            ❤️
+        </div>
+
+        <div class="number">
+            النهاية
+        </div>
+
+        <div class="finalName">
+            حنتي
+        </div>
+
+        <div class="finalMessage">
+
+            الحمد لله...
+
+            <br><br>
+
+            <span class="pink">
+                القلب ارتاح.
+            </span>
+
+            <br><br>
+
+            شكرًا إنك سامحتيني.
+
+            <br><br>
+
+            ومش هقولك إني هبقى شخص مبيغلطش،
+            بس هقولك حاجة أهم:
+
+            <br><br>
+
+            <span class="pink">
+                هحاول أهتم أكتر،
+                أسمع أكتر،
+                وأخليكي تحسي بمكانتك
+                من غير ما تستني تطلبي.
+            </span>
+
+            <br><br>
+
+            لأنك مش محتاجة تسمعي
+            إنك مهمة عندي...
+
+            <br>
+
+            <span class="pink">
+                إنتِ تستاهلي تحسي بده.
+            </span>
+
+        </div>
+
+        <div class="signature">
+            من محاميحو
+            <span>لحنتي ❤️</span>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<script>
+
+/* ================= OPEN ================= */
+
+function openSite(){
+
+    const start=document.getElementById("start");
+    const site=document.getElementById("site");
+
+    start.style.opacity="0";
+    site.style.opacity="1";
+
+    setTimeout(()=>{
+        start.style.display="none";
+    },1000);
+
+    hearts(12);
+}
+
+
+/* ================= PARTICLES ================= */
+
+const particles=
+document.getElementById("particles");
+
+for(let i=0;i<90;i++){
+
+    const p=document.createElement("div");
+
+    p.className="particle";
+
+    p.style.left=
+        Math.random()*100+"%";
+
+    p.style.animationDuration=
+        (7+Math.random()*12)+"s";
+
+    p.style.animationDelay=
+        Math.random()*12+"s";
+
+    particles.appendChild(p);
+}
+
+
+/* ================= HEARTS ================= */
+
+function hearts(amount){
+
+    for(let i=0;i<amount;i++){
+
+        setTimeout(()=>{
+
+            const h=
+                document.createElement("div");
+
+            h.className="heart";
+
+            const icons=[
+                "♡",
+                "♥",
+                "🤍",
+                "💕",
+                "✦"
+            ];
+
+            h.innerText=
+                icons[
+                    Math.floor(
+                        Math.random()*icons.length
+                    )
+                ];
+
+            h.style.left=
+                Math.random()*100+"vw";
+
+            h.style.setProperty(
+                "--move",
+                (Math.random()*180-90)+"px"
+            );
+
+            h.style.fontSize=
+                (14+Math.random()*22)+"px";
+
+            document.body.appendChild(h);
+
+            setTimeout(()=>{
+                h.remove();
+            },6000);
+
+        },i*80);
+    }
+}
+
+
+/* ================= CONFESSION ================= */
+
+function confess(){
+
+    document
+    .getElementById("confessionText")
+    .classList.add("show");
+
+    hearts(6);
+}
+
+
+/* ================= MOOD ================= */
+
+function mood(type){
+
+    const result=
+        document.getElementById("moodResult");
+
+    if(type===1){
+
+        result.innerHTML=
+        "طيب متزعليش مني كتير 🥺❤️<br>أنا فعلًا بحاول أصلح.";
+
+    }
+
+    if(type===2){
+
+        result.innerHTML=
+        "طب تعالي هنا كده 🤍<br>حقك عليا يا حنتي.";
+
+    }
+
+    if(type===3){
+
+        result.innerHTML=
+        "أهو كده بدأنا نوصل 😂❤️";
+
+    }
+
+    if(type===4){
+
+        result.innerHTML=
+        "الحمد لله 😂❤️<br>محاميحو كان قرب يفتح محضر تصالح.";
+
+        hearts(8);
+    }
+}
+
+
+/* ================= GAME ================= */
+
+function game(type){
+
+    const result=
+        document.getElementById("gameResult");
+
+    if(type===1){
+
+        result.innerHTML=
+        "صح جدًا 🤍";
+
+    }
+
+    if(type===2){
+
+        result.innerHTML=
+        "صح برضه... أنا محتاج أسمع أكتر.";
+
+    }
+
+    if(type===3){
+
+        result.innerHTML=
+        "الإجابة النموذجية 😂❤️";
+
+        hearts(5);
+    }
+}
+
+
+/* ================= GIFTS ================= */
+
+function openGift(gift){
+
+    gift.classList.toggle("open");
+
+    hearts(4);
+}
+
+
+/* ================= FINAL ================= */
+
+let count=0;
+
+function notYet(){
+
+    count++;
+
+    const btn=
+        document.getElementById("noBtn");
+
+    const words=[
+        "طب فكري تاني 🥹",
+        "حنتي بقى 😭",
+        "أنا آسف أهو ❤️",
+        "لسه؟ 😂",
+        "طب خلاص هعيط 🥺",
+        "آخر فرصة والله 😭"
+    ];
+
+    btn.innerText=
+        words[
+            Math.min(
+                count-1,
+                words.length-1
+            )
+        ];
+
+    if(count>=3){
+
+        const x=
+            Math.random()*160-80;
+
+        const y=
+            Math.random()*80-40;
+
+        btn.style.transform=
+            `translate(${x}px,${y}px)`;
+    }
+
+    hearts(3);
+}
+
+
+/* ================= FORGIVE ================= */
+
+function forgive(){
+
+    document
+    .getElementById("choice")
+    .style.display="none";
+
+    document
+    .getElementById("finalReveal")
+    .style.display="block";
+
+    hearts(80);
+
+    setTimeout(()=>{
+
+        window.scrollTo({
+            top:document.body.scrollHeight,
+            behavior:"smooth"
+        });
+
+    },200);
+}
+
+</script>
+
+</body>
+</html>
